@@ -64,13 +64,13 @@ Snyk Web UI を活用する (以下、任意課題)
 リポジトリ内にロックファイル package-lock.json が存在しない場合は、ローカル環境でビルドを実行して package-lock.json を生成した後、リモートリポジトリ (GitHub) へ push を行ってください。具体的な作業手順については、以下のコマンドを参考にしてください。
 
 ```
-$ git clone https://github.com/username/juice-shop.git
-$ cd juice-shop
-$ npm install
-$ ls package-lock.json
-$ git add package-lock.json
-$ git commit -m "add package-lock.json"
-$ git push origin master
+git clone https://github.com/username/juice-shop.git
+cd juice-shop
+npm install
+ls package-lock.json
+git add package-lock.json
+git commit -m "add package-lock.json"
+git push origin master
 ```
 
 # AWS CodePipeline のパイプラインを作成する
