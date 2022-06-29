@@ -49,7 +49,7 @@ Snyk Web UI を活用する (以下、任意課題)
 
 ## Step 1 - 数多くの脆弱性を含む Juice-Shop アプリケーションのフォーク
 
-注: Juice-Shop アプリケーションをすでにフォーク済みの場合、このステップは省略できます。ただし、リポジトリ内に package-lock.json ファイルが存在しない場合、ビルドを実行して package-lock.json ファイルを生成した上で、リポジトリにチェックインすることが必要です。
+注: Juice-Shop アプリケーションをすでにフォーク済みの場合、このステップは省略できます。ただし、リポジトリ内に package-lock.json ファイルが存在しない場合、ビルドを実行して package-lock.json ファイルを生成した上で、リポジトリにチェックインすることが必要です。 👉 
 
 次の GitHub リポジトリにアクセスしてください - https://github.com/alexeisnyk/juice-shop
 
@@ -59,7 +59,19 @@ Snyk Web UI を活用する (以下、任意課題)
 
 ![image](https://user-images.githubusercontent.com/95601557/176453050-8f7a0172-2a70-4a65-9cc7-9adedf5b3a0f.png)
 
+### package-lock.json ファイルの生成について
 
+リポジトリ内にロックファイル package-lock.json が存在しない場合は、ローカル環境でビルドを実行して package-lock.json を生成した後、リモートリポジトリ (GitHub) へ push を行ってください。具体的な作業手順については、以下のコマンドを参考にしてください。
+
+```
+$ git clone https://github.com/username/juice-shop.git
+$ cd juice-shop
+$ npm install
+$ ls package-lock.json
+$ git add package-lock.json
+$ git commit -m "add package-lock.json"
+$ git push origin master
+```
 
 # AWS CodePipeline のパイプラインを作成する
 
