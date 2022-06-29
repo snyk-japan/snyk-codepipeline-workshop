@@ -49,6 +49,18 @@ Snyk Web UI を活用する (以下、任意課題)
 
 ## Step 1 - 数多くの脆弱性を含む Juice-Shop アプリケーションのフォーク
 
+注: Juice-Shop アプリケーションをすでにフォーク済みの場合、このステップは省略できます。ただし、リポジトリ内に package-lock.json ファイルが存在しない場合、ビルドを実行して package-lock.json ファイルを生成した上で、リポジトリにチェックインすることが必要です。
+
+次の GitHub リポジトリにアクセスしてください - https://github.com/alexeisnyk/juice-shop
+
+* "**Fork**" ボタンを選択します
+* フォーク先がパブリックな GitHub アカウントであることを確かめます
+* "**Create fork**" ボタンを選択します
+
+![alt tag](https://ibb.co/NL5kbp8/Juice-Shop-Github.png)
+
+
+
 # AWS CodePipeline のパイプラインを作成する
 
 ## Step 2 - パイプライン設定の選択
