@@ -57,7 +57,7 @@ Snyk Web UI を活用する (以下、任意課題)
 * フォーク先がパブリックな GitHub アカウントであることを確かめます
 * "**Create fork**" ボタンを選択します
 
-![alt tag](https://ibb.co/NL5kbp8)
+![image](https://user-images.githubusercontent.com/95601557/176453050-8f7a0172-2a70-4a65-9cc7-9adedf5b3a0f.png)
 
 
 
