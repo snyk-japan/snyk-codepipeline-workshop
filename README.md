@@ -78,7 +78,25 @@ AWS コンソールへログインしてください - https://console.aws.amazo
 <img width="1066" alt="image" src="https://user-images.githubusercontent.com/95601557/176459026-c40cc871-afbb-4f6c-ac4f-16a13132c91b.png">
 
 
+
 ## Step 3 - パイプラインへソースステージ追加
+
+ソースステージを追加し、GitHub へフォークした Juice-Shop を、リポジトリやブランチとして指定します。
+
+* "**ソースステージを追加する**" ウィンドウでソースプロバイダーとして `GitHub (バージョン 2)` を選択します
+* "**GitHub に接続する**" ボタンを選択します
+* "**接続を作成する**" ウィンドウで接続名 (例: `github-yourusername`) を指定し、"**GitHub に接続する**" ボタンを選択します
+* 同ウィンドウで "**新しいアプリをインストールする**" ボタンを選択します
+* GitHub へのログイン、または、GitHub パスワードの入力等が求められるので、ログインを行います
+* "**Save**" ボタンを選択し、AWS Connector for GitHub のインストールを完了します
+* "**GitHub に接続する**" ウィンドウで "**接続**" ボタンを選択します
+* "**ソースステージを追加する**" ウィンドウに戻り、"**接続する準備が完了しました**" との表示を確認します
+* リポジトリ名 (`juice-shop`) と、ブランチ名 (`master`) を選択します
+* "**次に**" ボタンを選択します
+
+<img width="1066" alt="image" src="https://user-images.githubusercontent.com/95601557/176465551-6fccbf4b-f552-4a5e-ad2a-f627c55aee8a.png">
+
+
 ## Step 4 - パイプラインへビルドステージ追加
 ## Step 5 - パイプライン実行の確認
 
