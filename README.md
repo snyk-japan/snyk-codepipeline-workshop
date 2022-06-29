@@ -134,6 +134,11 @@ AWS コンソールへログインしてください - https://console.aws.amazo
 
 # パイプラインに Snyk スキャンのステージを追加する
 
+Step 6 〜 Step 10 の手順ついては、以下のドキュメント (英文) にも詳しく説明されています。
+
+ドキュメント: [AWS CodePipeline integration](https://docs.snyk.io/integrations/ci-cd-integrations/aws-codepipeline-integration)
+
+
 ## Step 6 - ステージ追加
 
 Snyk スキャンを実行するためのステージを追加します。
