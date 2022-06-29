@@ -243,7 +243,62 @@ GitHub インテグレーションを設定するためには、以下の手順�
 
 
 ## Step 13 - GitHub 連携を通じた Snyk Open Source スキャンの実行
+
+GitHub 上のリポジトリ "**juice-shop**" を Project (プロジェクト) として Snyk にインポートします。
+
+* Snyk Web UI を開く - https://app.snyk.io
+* "**Project**" タブを選択
+* ページ右上の "**Add Project**" を、続いて "**GitHub**" を選択します
+* フォークしたリポジトリ "**juice-shop**" のチェックボックスを選択します
+* ページ右上の "**Add Selected Repositories**" ボタンを選択します
+
+![alt tag](https://i.ibb.co/ngxDfvw/Import-Juice-Shop.png)
+
+* "**package.json**" (複数ある場合は `frontend/` ではないもの) を選択して、オープンソースのスキャン結果を確認します
+
+Juice-Shop プロジェクトのリスクを確認しましょう。オープンソースの依存パッケージを宣言しているマニフェストファイル "**package.json**" を選択してください。マニフェストファイルの内容を確認することができます。
+
+![alt tag](https://i.ibb.co/ZhN6tXY/Package-json-view.png)
+
+続いて Snyk UI へ戻り、脆弱性を確認します。
+
+脆弱性はデフォルトでは [Priority Score](https://docs.snyk.io/features/fixing-and-prioritizing-issues/starting-to-fix-vulnerabilities/snyk-priority-score) 順でソートされます。それぞれの脆弱性に対して、以下の情報が提供されます。
+
+1. Introduced through: 脆弱性の混入元であるパッケージ (推移的依存パッケージからの混入の場合は、マニフェストファイルで宣言されたパッケージが表示されます)
+1. Detailed paths and remediations: 混入元の依存パッケージまでのパスと、修正方法
+1. Overview: 脆弱性についての概要
+1. Exploit maturity: 攻撃可能性 (PoC=実証コードの有無など、攻撃される可能性の程度)
+1. Links to CWE, CVE and CVSS Score: CWE と CVE へのリンク、CVSS スコア
+1. その他
+
+![alt tag](https://i.ibb.co/xq2GWCs/Snyk-OS-vuln.png)
+
+
+
 ## Step 14 - PR (プルリクエスト) を通じた脆弱性の修正
+
+GitHub インテグレーションを使用していて、かつ修正が存在する場合、Snyk は Pull Request (プルリクエスト、以下 PR) を通じて、脆弱性のある依存パッケージを修正済みバージョンへ自動アップグレードすることができます。
+
+* "**Prototype Pollution**" の脆弱性について、"**Fix this vulnerability**" ボタンを選択します
+
+![alt tag](https://i.ibb.co/9NHPmn2/Snyk-OS-Fix-this-vuln.png)
+
+* 次の画面で、PR で修正する脆弱性を確認することができます。画面下部の "**Open a Fix PR**" ボタンを選択します
+
+![alt tag](https://i.ibb.co/y5PHhhT/Vulns-to-fix-pr-view.png)
+![alt tag](https://i.ibb.co/p2Lx5Rd/Open-fix-pr-button.png)
+
+* 準備ができると GitHub 上で PR が表示されます。ここでは Files changed タブから diff (変更による差分) を確認することができます。
+
+Snyk はお好みの Git リポジトリと連携して、PR の作成時にマニフェストファイルをスキャン可能です。メインブランチにマージする前の段階で、コードをセキュアな状態に維持することができます。
+
+![alt tag](https://i.ibb.co/ySc72zN/Fix-PR-Github.png)
+![alt tag](https://i.ibb.co/BzrNHvg/Files-changed-Github.png)
+
+* セキュリティチェックが行われ、この PR によって新たな脆弱性が発生しないことを確認できます
+* (任意) PR をマージします
+* PR をマージした場合、Snyk UI へ戻って脆弱性が修正されていることを確認することもできます
+
 
 
 以上でワークショップ完了です。お疲れさまでした！
