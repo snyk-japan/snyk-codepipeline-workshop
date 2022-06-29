@@ -148,10 +148,39 @@ Snyk スキャンを実行するためのステージを追加します。
 
 ## Step 7 - アクショングループ追加
 
+Snyk スキャンの設定を開始します。
+
+* "**+ アクショングループを追加する**" ボタンを選択します
+* "**アクションを編集する**" モーダルでアクション名 (例: `Snyk Scan`) を指定、アクションプロバイダーとして "**Snyk**" を選択、入力アーティファクトとして "**SourceArtifact**" を選択します
+* "**Snyk に接続**" ボタンを選択すると別ウィンドウが表示されます
 
 
 ## Step 8 - Snyk へ接続
+
+Snyk へログインします。ログイン済みの場合は Step 9 に進みます。
+
+* Snyk へのログインを求められたらログインします
+* "**Configure Snyk for AWS Codepipelines**" と表示されたら Step 9 へ進みます
+
+
+
 ## Step 9 - スキャン設定
+
+Snyk スキャンの詳細について設定します。
+
+* "**Configure Snyk for AWS Codepipelines**" ウィンドウで、各項目は次の通り設定します:
+  * Snyk organization を適宜選択 (ただし複数の Snyk organization に属している場合のみ選択が必要)
+  * Vulnerability handling - Block deployment when Snyk finds an error はチェックを入れたままに
+  * Block deployment for vulnerabilities with a minimum severity of は "**High**" に
+  * Monitoring behavior on build は "**Always monitor**" に
+  * Project to monitor (例: `juice-shop-codepipeline`) を入力
+  * Auto detect all projects in working directory はチェックを入れたままに
+* "**Continue**" ボタンを選択します
+
+<img width="712" alt="image" src="https://user-images.githubusercontent.com/95601557/176486811-2793ea07-460a-4d6e-a686-6ad11f52721e.png">
+
+
+
 ## Step 10 - Snyk スキャン結果の確認
 
 # Snyk Web UI を活用する (以下、任意課題)
