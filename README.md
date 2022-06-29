@@ -57,7 +57,7 @@ Snyk Web UI を活用する (以下、任意課題)
 * フォーク先がパブリックな GitHub アカウントであることを確かめます
 * "**Create fork**" ボタンを選択します
 
-![alt tag](https://ibb.co/NL5kbp8/Juice-Shop-Github.png)
+![alt tag](https://ibb.co/NL5kbp8)
 
 
 
