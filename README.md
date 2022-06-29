@@ -134,7 +134,7 @@ AWS コンソールへログインしてください - https://console.aws.amazo
 
 # パイプラインに Snyk スキャンのステージを追加する
 
-Step 6 〜 Step 10 の手順ついては、以下のドキュメント (英文) にも詳しく説明されています。
+Step 6 〜 Step 10 の手順については、以下のドキュメント (英文) にも詳しく説明されています。
 
 ドキュメント: [AWS CodePipeline integration](https://docs.snyk.io/integrations/ci-cd-integrations/aws-codepipeline-integration)
 
@@ -214,7 +214,34 @@ Snyk スキャンの設定を完了すると、Snyk スキャンが実行され�
 # Snyk Web UI を活用する (以下、任意課題)
 
 ## Step 11 - モニタリング用プロジェクトの確認
+
+CodePipeline での Snyk スキャン結果は、Step 9 の "**Monitoring behavior on build**" の指定により、Snyk Web UI から確認することができます。
+
+* Snyk Web UI を開く - https://app.snyk.io
+* "**Project**" タブを選択
+* 画面左のフィルタリングにて Integrations - CI/CLI にチェックを入れる
+* Project to monitor で指定した名前 (例: `juice-shop-codepipeline`) でスキャン結果が確認できるはずです
+
+
+
 ## Step 12 - GitHub インテグレーションの設定
+
+時間に余裕があれば、Juice-Shop に対するスキャンを GitHub とのインテグレーションを通じて実行してみましょう。GitHub インテグレーションの設定が必要かもしれません。
+
+* Snyk Web UI を開く - https://app.snyk.io
+* "**Project**" タブを選択
+* ウィンドウ右上の "**Add Project**" ボタンを選択して、"**GitHub**" がアイコンと共に表示されれば、GitHub インテグレーションは設定済みです
+
+GitHub インテグレーションを設定するためには、以下の手順を実施してください。
+
+* Snyk Web UI を開く - https://app.snyk.io
+* Integrations タブ -> Source Control -> GitHub を選択する
+* クレデンシャルを設定して GitHub アカウントへ接続する
+
+![alt tag](https://i.ibb.co/bPqqybM/snyk-starter-open-source-1.png)
+
+
+
 ## Step 13 - GitHub 連携を通じた Snyk Open Source スキャンの実行
 ## Step 14 - PR (プルリクエスト) を通じた脆弱性の修正
 
