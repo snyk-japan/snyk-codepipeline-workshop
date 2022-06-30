@@ -55,7 +55,7 @@ Snyk Web UI を活用する (以下、任意課題)
 
 注: Juice-Shop アプリケーションをすでにフォーク済みの場合、このステップは省略できます。ただし、リポジトリ内に package-lock.json ファイルが存在しない場合、ビルドを実行して package-lock.json ファイルを生成した上で、リポジトリにチェックインすることが必要です。 👉 [package-lock.json ファイルの生成について](#package-lockjson-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E7%94%9F%E6%88%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
 
-次の GitHub リポジトリにアクセスしてください - https://github.com/alexeisnyk/juice-shop
+次の GitHub リポジトリにアクセスしてください - https://github.com/alexeisnyk/juice-shop (こちらのリポジトリをフォークした場合、Node.js バージョンとして `10.x`, `12.x`, `14.x` のいずれかをご利用ください)
 
 * "**Fork**" ボタンを選択します
 * フォーク先がパブリックな GitHub アカウントであることを確かめます
